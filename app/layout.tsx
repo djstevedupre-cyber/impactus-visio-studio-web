@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.impactusvisio.com"),
+  metadataBase: new URL("https://impactus-visio-studio-web.vercel.app"),
   title: "Impactus Visio Studio",
   description:
     "Producción audiovisual con dron, edición de video, voz en off y contenido visual de alto impacto para marcas, negocios y eventos.",
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: "Impactus Visio Studio",
     description:
       "Producción audiovisual con dron, edición de video, voz en off y contenido visual de alto impacto para marcas, negocios y eventos.",
-    url: "https://www.impactusvisio.com",
+    url: "https://impactus-visio-studio-web.vercel.app",
     siteName: "Impactus Visio Studio",
     images: [
       {
-        url: "/og-impactus.jpg",
+        url: "https://impactus-visio-studio-web.vercel.app/og-impactus.jpg",
         width: 1200,
         height: 630,
         alt: "Impactus Visio Studio",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Impactus Visio Studio",
     description:
       "Producción audiovisual con dron, edición de video, voz en off y contenido visual de alto impacto para marcas, negocios y eventos.",
-    images: ["/og-impactus.jpg"],
+    images: ["https://impactus-visio-studio-web.vercel.app/og-impactus.jpg"],
   },
   icons: {
     icon: "/logo-impactus.png",
