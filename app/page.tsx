@@ -60,7 +60,7 @@ export default function Home() {
       text: "Videos que transmiten orden, valor y profesionalismo.",
     },
     {
-      image: "/galeria4.jpg",
+      image: "/eventos.mp4",
       title: "Eventos y experiencias",
       text: "Registro visual de momentos que merecen verse memorables.",
     },
