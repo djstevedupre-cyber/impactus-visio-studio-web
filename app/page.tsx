@@ -284,12 +284,25 @@ export default function Home() {
                 className="group overflow-hidden rounded-[1.8rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25"
               >
                 <div className="relative aspect-[4/5] overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                  />
+                  {"video" in item ? (
+                    <video
+                      src={item.video}
+                      className="h-full w-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                  ) : (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  )}
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+
                   <div className="absolute bottom-0 left-0 right-0 p-5">
                     <h3 className="text-lg font-semibold text-white">
                       {item.title}
