@@ -305,7 +305,7 @@ export default function Home() {
                   Contacto
                 </p>
                 <h2 className="mt-4 max-w-3xl text-3xl font-bold md:text-5xl">
-                  Si quieres una imagen que impacte, escríbenos.
+                  Haz que tu negocio, evento o marca proyecte una imagen poderosa desde el primer segundo. Escríbenos y creemos algo que realmente impacte.
                 </h2>
               </div>
 
