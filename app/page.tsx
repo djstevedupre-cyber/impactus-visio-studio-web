@@ -33,17 +33,17 @@ export default function Home() {
   alt="Impactus Visio Studio"
   className="h-14 w-14 rounded-full object-cover ring-1 ring-cyan-300/20 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
 />
-            <div>
-              <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-200">
-                Impactus Visio
-              </p>
-              <p className="text-[11px] uppercase tracking-[0.35em] text-white/45">
-                Studio
-              </p>
-            </div>
+            <div className="leading-tight">
+  <p className="text-[15px] font-black uppercase tracking-[0.28em] text-cyan-200">
+    Impactus Visio
+  </p>
+  <p className="mt-1 text-[11px] uppercase tracking-[0.42em] text-white/50">
+    Studio
+  </p>
+</div>
           </a>
 
-          <nav className="hidden items-center gap-6 text-sm text-white/75 md:flex">
+          <nav className="hidden items-center gap-8 text-[15px] text-white/75 md:flex">
             <a href="#inicio" className="transition hover:text-cyan-300">
               Inicio
             </a>
