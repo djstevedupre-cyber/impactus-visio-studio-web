@@ -105,12 +105,12 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cyan-400/20 via-transparent to-blue-500/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] p-6 shadow-2xl shadow-black/40 backdrop-blur-xl">
                 <div className="flex justify-center">
-                  <img
-                    src="/logo-impactus.png"
-                    alt="Logo Impactus Visio Studio"
-                    className="h-auto w-full max-w-[520px] drop-shadow-[0_0_30px_rgba(59,130,246,0.35)]"
-                  />
-                </div>
+  <img
+    src="/logo-impactus.png"
+    alt="Logo Impactus Visio Studio"
+    className="h-auto w-full max-w-[520px] animate-float drop-shadow-[0_0_30px_rgba(59,130,246,0.35)]"
+  />
+</div>
               </div>
             </div>
           </div>
