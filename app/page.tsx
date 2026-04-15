@@ -244,7 +244,7 @@ export default function Home() {
       Experiencia 360
     </p>
     <h2 className="mt-3 text-3xl font-bold md:text-5xl">
-      Explora la escena en 360°
+      Explora tu espacio en 360°
     </h2>
   </div>
 
