@@ -1,3 +1,8 @@
+import dynamic from "next/dynamic";
+
+const Viewer360 = dynamic(() => import("./components/Viewer360"), {
+  ssr: false,
+});
 export default function Home() {
   const galleryImages = [
     "/galeria1.jpg",
@@ -236,6 +241,18 @@ export default function Home() {
             </div>
           </div>
         </section>
+<section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+  <div className="mb-8">
+    <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
+      Experiencia 360
+    </p>
+    <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+      Explora la escena en 360°
+    </h2>
+  </div>
+
+  <Viewer360 />
+</section>
 
         <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
           <div className="grid gap-5 md:grid-cols-3">
