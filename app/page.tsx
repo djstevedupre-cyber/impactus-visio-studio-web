@@ -268,10 +268,26 @@ export default function Home() {
       </p>
     </div>
 
-    <div className="md:col-start-2 h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+      <img
+        src="/imagen-izquierda.jpg"
+        alt="Imagen izquierda"
+        className="h-full w-full object-cover"
+      />
+    </div>
+
+    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
       <img
         src="/voz-en-off.jpg"
         alt="Imagen voz en off"
+        className="h-full w-full object-cover"
+      />
+    </div>
+
+    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+      <img
+        src="/imagen-derecha.jpg"
+        alt="Imagen derecha"
         className="h-full w-full object-cover"
       />
     </div>
