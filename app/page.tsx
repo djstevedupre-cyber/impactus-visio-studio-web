@@ -138,9 +138,12 @@ export default function Home() {
           <div className="grid auto-rows-[220px] gap-5 md:grid-cols-3">
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25 md:row-span-2">
               <video
-                src={galleryImages[0]}
-                alt="Trabajo Impactus 1"
+                src={showcaseVideos[0]}
                 className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                autoPlay
+                muted
+                loop
+                playsInline
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
             </div>
@@ -156,7 +159,7 @@ export default function Home() {
 
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25">
               <video
-                src="/eventos.mp4"
+                src={showcaseVideos[2]}
                 className="h-full w-full object-cover"
                 autoPlay
                 muted
@@ -240,21 +243,27 @@ export default function Home() {
               <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
                 Dron
               </p>
-              <p className="mt-4 text-2xl font-semibold">Tomas que elevan la percepción visual.</p>
+              <p className="mt-4 text-2xl font-semibold">
+                Tomas que elevan la percepción visual.
+              </p>
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
               <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
                 Edición
               </p>
-              <p className="mt-4 text-2xl font-semibold">Videos con ritmo, estética y fuerza comercial.</p>
+              <p className="mt-4 text-2xl font-semibold">
+                Videos con ritmo, estética y fuerza comercial.
+              </p>
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
               <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
                 Voz en off
               </p>
-              <p className="mt-4 text-2xl font-semibold">Narración profesional para piezas que venden mejor.</p>
+              <p className="mt-4 text-2xl font-semibold">
+                Narración profesional para piezas que venden mejor.
+              </p>
             </div>
           </div>
         </section>
@@ -277,13 +286,16 @@ export default function Home() {
               <div className="rounded-[2rem] border border-white/10 bg-black/30 p-7 backdrop-blur-sm">
                 <div className="space-y-4 text-white/85">
                   <p>
-                    <span className="text-white/45">WhatsApp:</span> +57 315 779 0101
+                    <span className="text-white/45">WhatsApp:</span> +57 315 779
+                    0101
                   </p>
                   <p>
-                    <span className="text-white/45">Instagram:</span> @impactus.visio.studio
+                    <span className="text-white/45">Instagram:</span>{" "}
+                    @impactus.visio.studio
                   </p>
                   <p>
-                    <span className="text-white/45">Correo:</span> impactusvisio@gmail.com
+                    <span className="text-white/45">Correo:</span>{" "}
+                    impactusvisio@gmail.com
                   </p>
                   <p>
                     <span className="text-white/45">Ciudad:</span> Bogotá
