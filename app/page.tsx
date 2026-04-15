@@ -219,6 +219,7 @@ export default function Home() {
                 <video
                   controls
                   preload="metadata"
+                  poster="/poster-video2.jpg"
                   className="h-auto w-full rounded-[1.5rem]"
                 >
                   <source src={showcaseVideos[1]} type="video/mp4" />
@@ -230,6 +231,7 @@ export default function Home() {
                 <video
                   controls
                   preload="metadata"
+                  poster="/poster-video3.jpg"
                   className="h-auto w-full rounded-[1.5rem]"
                 >
                   <source src={showcaseVideos[2]} type="video/mp4" />
