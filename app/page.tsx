@@ -157,18 +157,6 @@ export default function Home() {
             </div>
 
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25">
-              <video
-                src={showcaseVideos[2]}
-                className="h-full w-full object-cover"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/5 to-transparent" />
-            </div>
-
-            <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25">
               <img
                 src={galleryImages[2]}
                 alt="Trabajo Impactus 3"
