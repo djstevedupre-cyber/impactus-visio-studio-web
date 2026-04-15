@@ -1,8 +1,5 @@
-import dynamic from "next/dynamic";
+import Viewer360 from "./components/Viewer360";
 
-const Viewer360 = dynamic(() => import("./components/Viewer360"), {
-  ssr: false,
-});
 export default function Home() {
   const galleryImages = [
     "/galeria1.jpg",
