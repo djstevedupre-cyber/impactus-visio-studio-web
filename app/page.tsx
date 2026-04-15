@@ -206,6 +206,7 @@ export default function Home() {
               <video
                 controls
                 preload="metadata"
+                poster="/poster-video1.jpg"
                 className="h-auto w-full rounded-[1.5rem]"
               >
                 <source src={showcaseVideos[0]} type="video/mp4" />
