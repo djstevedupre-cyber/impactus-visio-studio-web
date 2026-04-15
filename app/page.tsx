@@ -74,7 +74,7 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 max-w-4xl text-5xl font-black leading-[0.92] md:text-7xl">
-                Impacto visual que hace que una marca se vea inolvidable.
+                Impacto visual que hace que tu marca se vea inolvidable.
               </h1>
 
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/72 md:text-xl">
