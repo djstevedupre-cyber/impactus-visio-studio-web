@@ -240,35 +240,43 @@ export default function Home() {
 </section>
 
         <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-          <div className="grid gap-5 md:grid-cols-3">
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-                Dron
-              </p>
-              <p className="mt-4 text-2xl font-semibold">
-                Tomas que elevan la percepción visual.
-              </p>
-            </div>
+  <div className="grid gap-5 md:grid-cols-3">
+    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+        Dron
+      </p>
+      <p className="mt-4 text-2xl font-semibold">
+        Tomas que elevan la percepción visual.
+      </p>
+    </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-                Edición
-              </p>
-              <p className="mt-4 text-2xl font-semibold">
-                Videos con ritmo, estética y fuerza comercial.
-              </p>
-            </div>
+    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+        Edición
+      </p>
+      <p className="mt-4 text-2xl font-semibold">
+        Videos con ritmo, estética y fuerza comercial.
+      </p>
+    </div>
 
-            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-                Voz en off
-              </p>
-              <p className="mt-4 text-2xl font-semibold">
-                Narración profesional para piezas que venden mejor.
-              </p>
-            </div>
-          </div>
-        </section>
+    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+        Voz en off
+      </p>
+      <p className="mt-4 text-2xl font-semibold">
+        Narración profesional para piezas que venden mejor.
+      </p>
+    </div>
+
+    <div className="md:col-start-2 h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+      <img
+        src="/voz-en-off.jpg"
+        alt="Imagen voz en off"
+        className="h-full w-full object-cover"
+      />
+    </div>
+  </div>
+</section>
 
         <section
           id="contacto"
