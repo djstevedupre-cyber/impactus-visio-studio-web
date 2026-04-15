@@ -139,16 +139,13 @@ export default function Home() {
 
           <div className="grid auto-rows-[220px] gap-5 md:grid-cols-3">
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25 md:row-span-2">
-              <video
-                src={showcaseVideos[0]}
-                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-            </div>
+  <img
+    src={galleryImages[0]}
+    alt="Trabajo Impactus 1"
+    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+  />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+</div>
 
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25">
               <img
