@@ -26,7 +26,7 @@ export default function Home() {
       </a>
 
       <header className="sticky top-0 z-50 border-b border-cyan-400/10 bg-black/45 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
           <a href="#inicio" className="flex items-center gap-3">
             <img
               src="/logo-impactus.png"
@@ -305,7 +305,7 @@ export default function Home() {
                   Contacto
                 </p>
                 <h2 className="mt-4 max-w-3xl text-3xl font-bold md:text-5xl">
-                  Proyecta una imagen que inspire confianza y valor, escríbenos YA.
+                  Proyecta una imagen que inspire confianza y valor. Hablemos de tu proyecto.
                 </h2>
               </div>
 
