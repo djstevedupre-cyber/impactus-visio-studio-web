@@ -29,10 +29,10 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
           <a href="#inicio" className="flex items-center gap-3">
             <img
-              src="/logo-impactus.png"
-              alt="Impactus Visio Studio"
-              className="h-12 w-12 rounded-full object-cover ring-1 ring-cyan-300/20"
-            />
+  src="/logo-impactus.png"
+  alt="Impactus Visio Studio"
+  className="h-14 w-14 rounded-full object-cover ring-1 ring-cyan-300/20 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
+/>
             <div>
               <p className="text-sm font-black uppercase tracking-[0.25em] text-cyan-200">
                 Impactus Visio
