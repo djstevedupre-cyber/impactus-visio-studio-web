@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Viewer360 from "./components/Viewer360";
 
 export default function Home() {
@@ -13,6 +16,81 @@ export default function Home() {
     "/video2.mp4",
     "/eventos.mp4",
   ];
+
+  const [formData, setFormData] = useState({
+    nombre: "",
+    empresa: "",
+    correo: "",
+    telefono: "",
+    proyecto: "",
+    contactoWhatsApp: false,
+    contactoCorreo: false,
+    contactoLlamada: false,
+    autorizacion: false,
+  });
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value, type } = e.target;
+
+    if (type === "checkbox") {
+      const checked = (e.target as HTMLInputElement).checked;
+      setFormData((prev) => ({
+        ...prev,
+        [name]: checked,
+      }));
+      return;
+    }
+
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (
+      !formData.nombre.trim() ||
+      !formData.correo.trim() ||
+      !formData.telefono.trim() ||
+      !formData.proyecto.trim()
+    ) {
+      alert("Por favor completa los campos obligatorios.");
+      return;
+    }
+
+    if (!formData.autorizacion) {
+      alert("Debes autorizar el tratamiento de datos personales.");
+      return;
+    }
+
+    const preferencias = [
+      formData.contactoWhatsApp ? "WhatsApp" : null,
+      formData.contactoCorreo ? "Correo" : null,
+      formData.contactoLlamada ? "Llamada" : null,
+    ]
+      .filter(Boolean)
+      .join(", ");
+
+    const mensaje = `Hola, quiero información de Impactus Visio Studio.
+
+*Nombre:* ${formData.nombre}
+*Empresa o marca:* ${formData.empresa || "No especificada"}
+*Correo electrónico:* ${formData.correo}
+*Número de teléfono:* ${formData.telefono}
+*Proyecto:* ${formData.proyecto}
+*Prefiere ser contactado por:* ${preferencias || "No especificado"}`;
+
+    const numeroWhatsApp = "573157790101";
+    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
+      mensaje
+    )}`;
+
+    window.open(url, "_blank");
+  };
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-[#02040a] text-white">
@@ -331,32 +409,47 @@ export default function Home() {
             </div>
 
             <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/20 md:p-8">
-              <form className="space-y-5">
+              <form className="space-y-5" onSubmit={handleSubmit}>
                 <input
                   type="text"
+                  name="nombre"
+                  value={formData.nombre}
+                  onChange={handleChange}
                   placeholder="Nombre *"
                   className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
                 />
 
                 <input
                   type="text"
+                  name="empresa"
+                  value={formData.empresa}
+                  onChange={handleChange}
                   placeholder="Empresa o marca"
                   className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
                 />
 
                 <input
                   type="email"
+                  name="correo"
+                  value={formData.correo}
+                  onChange={handleChange}
                   placeholder="Correo electrónico *"
                   className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
                 />
 
                 <input
                   type="tel"
+                  name="telefono"
+                  value={formData.telefono}
+                  onChange={handleChange}
                   placeholder="Número de teléfono *"
                   className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
                 />
 
                 <textarea
+                  name="proyecto"
+                  value={formData.proyecto}
+                  onChange={handleChange}
                   placeholder="Cuéntanos más sobre tu proyecto *"
                   rows={5}
                   className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
@@ -369,17 +462,35 @@ export default function Home() {
 
                   <div className="grid gap-3 sm:grid-cols-3">
                     <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
-                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <input
+                        type="checkbox"
+                        name="contactoWhatsApp"
+                        checked={formData.contactoWhatsApp}
+                        onChange={handleChange}
+                        className="h-5 w-5 accent-cyan-300"
+                      />
                       <span>WhatsApp</span>
                     </label>
 
                     <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
-                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <input
+                        type="checkbox"
+                        name="contactoCorreo"
+                        checked={formData.contactoCorreo}
+                        onChange={handleChange}
+                        className="h-5 w-5 accent-cyan-300"
+                      />
                       <span>Correo</span>
                     </label>
 
                     <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
-                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <input
+                        type="checkbox"
+                        name="contactoLlamada"
+                        checked={formData.contactoLlamada}
+                        onChange={handleChange}
+                        className="h-5 w-5 accent-cyan-300"
+                      />
                       <span>Llamada</span>
                     </label>
                   </div>
@@ -388,6 +499,9 @@ export default function Home() {
                 <label className="flex items-start gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/80">
                   <input
                     type="checkbox"
+                    name="autorizacion"
+                    checked={formData.autorizacion}
+                    onChange={handleChange}
                     className="mt-1 h-5 w-5 shrink-0 accent-cyan-300"
                   />
                   <span className="leading-7">
