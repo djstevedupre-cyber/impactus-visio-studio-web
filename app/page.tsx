@@ -29,18 +29,18 @@ export default function Home() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-8 py-5">
           <a href="#inicio" className="flex items-center gap-3">
             <img
-  src="/logo-impactus.png"
-  alt="Impactus Visio Studio"
-  className="h-14 w-14 rounded-full object-cover ring-1 ring-cyan-300/20 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
-/>
+              src="/logo-impactus.png"
+              alt="Impactus Visio Studio"
+              className="h-14 w-14 rounded-full object-cover ring-1 ring-cyan-300/20 shadow-[0_0_18px_rgba(34,211,238,0.18)]"
+            />
             <div className="leading-tight">
-  <p className="text-[15px] font-black uppercase tracking-[0.28em] text-cyan-200">
-    Impactus Visio
-  </p>
-  <p className="mt-1 text-[11px] uppercase tracking-[0.42em] text-white/50">
-    Studio
-  </p>
-</div>
+              <p className="text-[15px] font-black uppercase tracking-[0.28em] text-cyan-200">
+                Impactus Visio
+              </p>
+              <p className="mt-1 text-[11px] uppercase tracking-[0.42em] text-white/50">
+                Studio
+              </p>
+            </div>
           </a>
 
           <nav className="hidden items-center gap-8 text-[15px] text-white/75 md:flex">
@@ -105,12 +105,12 @@ export default function Home() {
               <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cyan-400/20 via-transparent to-blue-500/10 blur-3xl" />
               <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] p-6 shadow-2xl shadow-black/40 backdrop-blur-xl">
                 <div className="flex justify-center">
-  <img
-    src="/logo-impactus.png"
-    alt="Logo Impactus Visio Studio"
-    className="h-auto w-full max-w-[520px] animate-float drop-shadow-[0_0_30px_rgba(59,130,246,0.35)]"
-  />
-</div>
+                  <img
+                    src="/logo-impactus.png"
+                    alt="Logo Impactus Visio Studio"
+                    className="h-auto w-full max-w-[520px] animate-float drop-shadow-[0_0_30px_rgba(59,130,246,0.35)]"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -139,13 +139,13 @@ export default function Home() {
 
           <div className="grid auto-rows-[220px] gap-5 md:grid-cols-3">
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25 md:row-span-2">
-  <img
-    src={galleryImages[0]}
-    alt="Trabajo Impactus 1"
-    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-  />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-</div>
+              <img
+                src={galleryImages[0]}
+                alt="Trabajo Impactus 1"
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+            </div>
 
             <div className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/25">
               <img
@@ -186,174 +186,278 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
-            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/20">
+          <div className="grid items-start gap-6 lg:grid-cols-[0.7fr_1.6fr_0.7fr]">
+            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
               <video
                 controls
                 preload="metadata"
                 poster="/poster-video1.jpg"
-                className="h-auto w-full rounded-[1.5rem]"
+                className="h-[390px] w-full rounded-[1.5rem] object-cover"
               >
                 <source src={showcaseVideos[0]} type="video/mp4" />
                 Tu navegador no soporta video HTML5.
               </video>
             </div>
 
-            <div className="grid gap-6">
-              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/20">
-                <video
-                  controls
-                  preload="metadata"
-                  poster="/poster-video2.jpg"
-                  className="h-auto w-full rounded-[1.5rem]"
-                >
-                  <source src={showcaseVideos[1]} type="video/mp4" />
-                  Tu navegador no soporta video HTML5.
-                </video>
-              </div>
+            <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/20">
+              <video
+                controls
+                preload="metadata"
+                poster="/poster-video2.jpg"
+                className="h-auto w-full rounded-[1.5rem]"
+              >
+                <source src={showcaseVideos[1]} type="video/mp4" />
+                Tu navegador no soporta video HTML5.
+              </video>
+            </div>
 
-              <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-4 shadow-2xl shadow-black/20">
-                <video
-                  controls
-                  preload="metadata"
-                  poster="/poster-video3.jpg"
-                  className="h-auto w-full rounded-[1.5rem]"
-                >
-                  <source src={showcaseVideos[2]} type="video/mp4" />
-                  Tu navegador no soporta video HTML5.
-                </video>
-              </div>
+            <div className="mx-auto w-full max-w-[220px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
+              <video
+                controls
+                preload="metadata"
+                poster="/poster-video3.jpg"
+                className="h-[390px] w-full rounded-[1.5rem] object-cover"
+              >
+                <source src={showcaseVideos[2]} type="video/mp4" />
+                Tu navegador no soporta video HTML5.
+              </video>
             </div>
           </div>
         </section>
-<section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-  <div className="mb-8">
-    <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-      Experiencia 360
-    </p>
-    <h2 className="mt-3 text-3xl font-bold md:text-5xl">
-      Explora tu espacio en 360°
-    </h2>
-  </div>
-
-  <Viewer360 />
-</section>
 
         <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
-  <div className="grid gap-5 md:grid-cols-3">
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-        Dron
-      </p>
-      <p className="mt-4 text-2xl font-semibold">
-        Tomas que elevan la percepción visual.
-      </p>
-    </div>
+          <div className="mb-8">
+            <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
+              Experiencia 360
+            </p>
+            <h2 className="mt-3 text-3xl font-bold md:text-5xl">
+              Explora tu espacio en 360°
+            </h2>
+          </div>
 
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-        Edición
-      </p>
-      <p className="mt-4 text-2xl font-semibold">
-        Videos con ritmo, estética y fuerza comercial.
-      </p>
-    </div>
+          <Viewer360 />
+        </section>
 
-    <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
-      <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
-        Voz en off
-      </p>
-      <p className="mt-4 text-2xl font-semibold">
-        Narración profesional para piezas que venden mejor.
-      </p>
-    </div>
+        <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
+          <div className="grid gap-5 md:grid-cols-3">
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+                Dron
+              </p>
+              <p className="mt-4 text-2xl font-semibold">
+                Tomas que elevan la percepción visual.
+              </p>
+            </div>
 
-    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
-      <img
-        src="/imagen-izquierda.jpg"
-        alt="Imagen izquierda"
-        className="h-full w-full object-cover"
-      />
-    </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+                Edición
+              </p>
+              <p className="mt-4 text-2xl font-semibold">
+                Videos con ritmo, estética y fuerza comercial.
+              </p>
+            </div>
 
-    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
-      <img
-        src="/voz-en-off.jpg"
-        alt="Imagen voz en off"
-        className="h-full w-full object-cover"
-      />
-    </div>
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-xl shadow-black/20">
+              <p className="text-sm uppercase tracking-[0.25em] text-cyan-200">
+                Voz en off
+              </p>
+              <p className="mt-4 text-2xl font-semibold">
+                Narración profesional para piezas que venden mejor.
+              </p>
+            </div>
 
-    <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
-      <img
-        src="/imagen-derecha.jpg"
-        alt="Imagen derecha"
-        className="h-full w-full object-cover"
-      />
-    </div>
-  </div>
-</section>
+            <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+              <img
+                src="/imagen-izquierda.jpg"
+                alt="Imagen izquierda"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+              <img
+                src="/voz-en-off.jpg"
+                alt="Imagen voz en off"
+                className="h-full w-full object-cover"
+              />
+            </div>
+
+            <div className="h-[260px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] shadow-xl shadow-black/20">
+              <img
+                src="/imagen-derecha.jpg"
+                alt="Imagen derecha"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
+        </section>
 
         <section
           id="contacto"
-          className="mx-auto max-w-7xl px-6 pb-20 pt-6 md:pb-24"
+          className="mx-auto max-w-7xl px-6 pb-12 pt-8 md:pb-16 md:pt-10"
         >
-          <div className="overflow-hidden rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-cyan-300/10 via-white/[0.05] to-transparent p-8 shadow-2xl shadow-black/20 md:p-12">
-            <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
-              <div>
-                <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
-                  Contacto
-                </p>
-                <h2 className="mt-4 max-w-3xl text-3xl font-bold md:text-5xl">
-                  Proyecta una imagen que inspire confianza y valor. Hablemos de tu proyecto.
-                </h2>
+          <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
+            <div className="rounded-[2rem] border border-cyan-300/15 bg-gradient-to-br from-cyan-300/10 via-white/[0.04] to-transparent p-8 shadow-2xl shadow-black/20 md:p-10">
+              <p className="text-sm uppercase tracking-[0.35em] text-cyan-200">
+                Contacto
+              </p>
+
+              <h2 className="mt-6 text-4xl font-bold leading-tight md:text-6xl">
+                Hablemos de tu proyecto
+              </h2>
+
+              <div className="mt-8 space-y-4">
+                <a
+                  href="mailto:impactusvisio@gmail.com"
+                  className="block break-all text-2xl font-semibold text-cyan-300 underline underline-offset-4 transition hover:text-cyan-200 md:text-3xl"
+                >
+                  impactusvisio@gmail.com
+                </a>
+
+                <a
+                  href="https://wa.me/573157790101"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block text-2xl font-semibold text-cyan-300 underline underline-offset-4 transition hover:text-cyan-200 md:text-3xl"
+                >
+                  +57 315 779 0101
+                </a>
               </div>
 
-              <div className="rounded-[2rem] border border-white/10 bg-black/30 p-7 backdrop-blur-sm">
-                <div className="space-y-4 text-white/85">
-                  <p>
-                    <span className="text-white/45">WhatsApp:</span> +57 315 779
-                    0101
+              <p className="mt-10 text-3xl font-semibold leading-tight text-white md:text-5xl">
+                o completa este formulario
+              </p>
+            </div>
+
+            <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-black/20 md:p-8">
+              <form className="space-y-5">
+                <input
+                  type="text"
+                  placeholder="Nombre *"
+                  className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Empresa o marca"
+                  className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Correo electrónico *"
+                  className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
+                />
+
+                <input
+                  type="tel"
+                  placeholder="Número de teléfono *"
+                  className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
+                />
+
+                <textarea
+                  placeholder="Cuéntanos más sobre tu proyecto *"
+                  rows={5}
+                  className="w-full rounded-[1.4rem] border border-white/10 bg-white/[0.05] px-5 py-4 text-lg text-white outline-none transition placeholder:text-white/45 focus:border-cyan-300/60"
+                />
+
+                <div className="pt-2">
+                  <p className="mb-4 text-lg font-medium text-white">
+                    Prefiero que me contacten por:
                   </p>
-                  <p>
-                    <span className="text-white/45">Instagram:</span>{" "}
-                    @impactus.visio.studio
-                  </p>
-                  <p>
-                    <span className="text-white/45">Correo:</span>{" "}
-                    impactusvisio@gmail.com
-                  </p>
-                  <p>
-                    <span className="text-white/45">Ciudad:</span> Bogotá
-                  </p>
+
+                  <div className="grid gap-3 sm:grid-cols-3">
+                    <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
+                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <span>WhatsApp</span>
+                    </label>
+
+                    <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
+                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <span>Correo</span>
+                    </label>
+
+                    <label className="flex items-center gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/85">
+                      <input type="checkbox" className="h-5 w-5 accent-cyan-300" />
+                      <span>Llamada</span>
+                    </label>
+                  </div>
                 </div>
 
-                <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <a
-                    href="https://wa.me/573157790101"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-2xl bg-cyan-300 px-5 py-3 text-center font-semibold text-black transition hover:scale-[1.02]"
-                  >
-                    Escribir por WhatsApp
-                  </a>
-                  <a
-                    href="https://instagram.com/impactus.visio.studio"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="rounded-2xl border border-white/15 px-5 py-3 text-center font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-200"
-                  >
-                    Ver Instagram
-                  </a>
-                </div>
-              </div>
+                <label className="flex items-start gap-3 rounded-[1.2rem] border border-white/10 bg-white/[0.03] px-4 py-4 text-white/80">
+                  <input
+                    type="checkbox"
+                    className="mt-1 h-5 w-5 shrink-0 accent-cyan-300"
+                  />
+                  <span className="leading-7">
+                    Autorizo el tratamiento de mis datos personales.
+                  </span>
+                </label>
+
+                <button
+                  type="submit"
+                  className="w-full rounded-[1.5rem] bg-cyan-300 px-6 py-4 text-lg font-bold text-black transition hover:scale-[1.01]"
+                >
+                  Enviar mensaje
+                </button>
+              </form>
             </div>
           </div>
         </section>
       </main>
 
-      <footer className="border-t border-white/10 px-6 py-8 text-center text-sm text-white/40">
-        <p>© 2026 Impactus Visio Studio</p>
+      <footer className="border-t border-white/10 px-6 py-12 text-white/70">
+        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
+          <div>
+            <p className="text-lg font-semibold text-white">Impactus Visio Studio</p>
+            <p className="mt-4 leading-7 text-white/55">
+              Producción audiovisual, tomas con dron, edición de video y voz en
+              off para marcas, negocios y eventos.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-lg font-semibold text-white">Contacto</p>
+            <div className="mt-4 space-y-3">
+              <p>impactusvisio@gmail.com</p>
+              <p>+57 315 779 0101</p>
+              <p>Bogotá, Colombia</p>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-lg font-semibold text-white">Síguenos</p>
+            <div className="mt-4 space-y-3">
+              <a
+                href="https://instagram.com/impactus.visio.studio"
+                target="_blank"
+                rel="noreferrer"
+                className="block transition hover:text-cyan-300"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://wa.me/573157790101"
+                target="_blank"
+                rel="noreferrer"
+                className="block transition hover:text-cyan-300"
+              >
+                WhatsApp
+              </a>
+              <a
+                href="mailto:impactusvisio@gmail.com"
+                className="block transition hover:text-cyan-300"
+              >
+                Correo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 max-w-7xl border-t border-white/10 pt-6 text-center text-sm text-white/40">
+          <p>© 2026 Impactus Visio Studio. Todos los derechos reservados.</p>
+        </div>
       </footer>
     </div>
   );
