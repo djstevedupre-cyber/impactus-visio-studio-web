@@ -98,7 +98,7 @@ export default function Home() {
       setIsSubmitting(true);
 
       const response = await fetch(
-        "https://formsubmit.co/ajax/impactusvisio@gmail.com",
+  "https://formsubmit.co/ajax/28335c14e0a380fe746ac363f11ba124",
         {
           method: "POST",
           headers: {
