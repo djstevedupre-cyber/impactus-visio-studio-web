@@ -29,6 +29,10 @@ export default function Home() {
     autorizacion: false,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitMessage, setSubmitMessage] = useState("");
+  const [submitError, setSubmitError] = useState("");
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -49,8 +53,10 @@ export default function Home() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setSubmitMessage("");
+    setSubmitError("");
 
     if (
       !formData.nombre.trim() ||
@@ -58,38 +64,78 @@ export default function Home() {
       !formData.telefono.trim() ||
       !formData.proyecto.trim()
     ) {
-      alert("Por favor completa los campos obligatorios.");
+      setSubmitError("Por favor completa los campos obligatorios.");
       return;
     }
 
     if (!formData.autorizacion) {
-      alert("Debes autorizar el tratamiento de datos personales.");
+      setSubmitError("Debes autorizar el tratamiento de tus datos personales.");
       return;
     }
 
     const preferencias = [
       formData.contactoWhatsApp ? "WhatsApp" : null,
-      formData.contactoCorreo ? "Correo" : null,
+      formData.contactoCorreo ? "Correo electrónico" : null,
       formData.contactoLlamada ? "Llamada" : null,
     ]
       .filter(Boolean)
       .join(", ");
 
-    const mensaje = `Hola, quiero información de Impactus Visio Studio.
+    const payload = new FormData();
+    payload.append("nombre", formData.nombre);
+    payload.append("empresa", formData.empresa || "No especificada");
+    payload.append("correo", formData.correo);
+    payload.append("telefono", formData.telefono);
+    payload.append("proyecto", formData.proyecto);
+    payload.append(
+      "preferencia_de_contacto",
+      preferencias || "No especificada"
+    );
+    payload.append("autorizacion", "Sí");
+    payload.append("_subject", "Nuevo contacto desde Impactus Visio Studio");
 
-*Nombre:* ${formData.nombre}
-*Empresa o marca:* ${formData.empresa || "No especificada"}
-*Correo electrónico:* ${formData.correo}
-*Número de teléfono:* ${formData.telefono}
-*Proyecto:* ${formData.proyecto}
-*Prefiere ser contactado por:* ${preferencias || "No especificado"}`;
+    try {
+      setIsSubmitting(true);
 
-    const numeroWhatsApp = "573157790101";
-    const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
-      mensaje
-    )}`;
+      const response = await fetch(
+        "https://formsubmit.co/ajax/impactusvisio@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+          },
+          body: payload,
+        }
+      );
 
-    window.open(url, "_blank");
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result?.message || "No se pudo enviar el formulario.");
+      }
+
+      setSubmitMessage(
+        "Gracias por contactarnos. Hemos recibido tu solicitud y en breve nos comunicaremos contigo."
+      );
+
+      setFormData({
+        nombre: "",
+        empresa: "",
+        correo: "",
+        telefono: "",
+        proyecto: "",
+        contactoWhatsApp: false,
+        contactoCorreo: false,
+        contactoLlamada: false,
+        autorizacion: false,
+      });
+    } catch {
+      setSubmitError(
+        "No pudimos enviar tu solicitud en este momento. Inténtalo nuevamente en unos minutos."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -509,11 +555,24 @@ export default function Home() {
                   </span>
                 </label>
 
+                {submitMessage && (
+                  <div className="rounded-[1.2rem] border border-cyan-300/30 bg-cyan-300/10 px-4 py-4 text-base leading-7 text-cyan-100">
+                    {submitMessage}
+                  </div>
+                )}
+
+                {submitError && (
+                  <div className="rounded-[1.2rem] border border-red-400/30 bg-red-400/10 px-4 py-4 text-base leading-7 text-red-200">
+                    {submitError}
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full rounded-[1.5rem] bg-cyan-300 px-6 py-4 text-lg font-bold text-black transition hover:scale-[1.01]"
+                  disabled={isSubmitting}
+                  className="w-full rounded-[1.5rem] bg-cyan-300 px-6 py-4 text-lg font-bold text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
                 >
-                  Enviar mensaje
+                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
                 </button>
               </form>
             </div>
@@ -524,7 +583,9 @@ export default function Home() {
       <footer className="border-t border-white/10 px-6 py-12 text-white/70">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
           <div>
-            <p className="text-lg font-semibold text-white">Impactus Visio Studio</p>
+            <p className="text-lg font-semibold text-white">
+              Impactus Visio Studio
+            </p>
             <p className="mt-4 leading-7 text-white/55">
               Producción audiovisual, tomas con dron, edición de video y voz en
               off para marcas, negocios y eventos.
