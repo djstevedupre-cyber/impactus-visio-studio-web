@@ -606,29 +606,37 @@ export default function Home() {
           <div>
             <p className="text-lg font-semibold text-white">Síguenos</p>
             <div className="mt-4 space-y-3">
-              <a
-                href="https://instagram.com/impactus.visio.studio"
-                target="_blank"
-                rel="noreferrer"
-                className="block transition hover:text-cyan-300"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://wa.me/573157790101"
-                target="_blank"
-                rel="noreferrer"
-                className="block transition hover:text-cyan-300"
-              >
-                WhatsApp
-              </a>
-              <a
-                href="mailto:impactusvisio@gmail.com"
-                className="block transition hover:text-cyan-300"
-              >
-                Correo
-              </a>
-            </div>
+  <a
+    href="https://instagram.com/impactus.visio.studio"
+    target="_blank"
+    rel="noreferrer"
+    className="block transition hover:text-cyan-300"
+  >
+    Instagram
+  </a>
+  <a
+    href="https://www.facebook.com/impactusvisiostudio?locale=es_LA"
+    target="_blank"
+    rel="noreferrer"
+    className="block transition hover:text-cyan-300"
+  >
+    Facebook
+  </a>
+  <a
+    href="https://wa.me/573157790101"
+    target="_blank"
+    rel="noreferrer"
+    className="block transition hover:text-cyan-300"
+  >
+    WhatsApp
+  </a>
+  <a
+    href="mailto:impactusvisio@gmail.com"
+    className="block transition hover:text-cyan-300"
+  >
+    Correo
+  </a>
+</div>
           </div>
         </div>
 
