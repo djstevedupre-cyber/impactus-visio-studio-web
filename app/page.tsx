@@ -556,10 +556,10 @@ export default function Home() {
                 </label>
 
                 {submitMessage && (
-                  <div className="rounded-[1.2rem] border border-cyan-300/30 bg-cyan-300/10 px-4 py-4 text-base leading-7 text-cyan-100">
-                    {submitMessage}
-                  </div>
-                )}
+  <div className="rounded-[1.5rem] border border-cyan-300/60 bg-cyan-400/20 px-5 py-5 text-lg font-semibold leading-8 text-cyan-50 shadow-[0_0_25px_rgba(34,211,238,0.18)]">
+    ✅ {submitMessage}
+  </div>
+)}
 
                 {submitError && (
                   <div className="rounded-[1.2rem] border border-red-400/30 bg-red-400/10 px-4 py-4 text-base leading-7 text-red-200">
@@ -567,13 +567,15 @@ export default function Home() {
                   </div>
                 )}
 
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full rounded-[1.5rem] bg-cyan-300 px-6 py-4 text-lg font-bold text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
-                >
-                  {isSubmitting ? "Enviando..." : "Enviar mensaje"}
-                </button>
+                {!submitMessage && (
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className="w-full rounded-[1.5rem] bg-cyan-300 px-6 py-4 text-lg font-bold text-black transition hover:scale-[1.01] disabled:cursor-not-allowed disabled:opacity-70"
+  >
+    {isSubmitting ? "Enviando..." : "Enviar mensaje"}
+  </button>
+)}
               </form>
             </div>
           </div>
