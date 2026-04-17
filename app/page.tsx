@@ -360,7 +360,7 @@ export default function Home() {
       poster="/poster-video4.jpg"
       className="h-[430px] w-full rounded-[1.5rem] object-cover"
     >
-      <source src={showcaseVideos[3]} type="video/mp4" />
+      <source src="/video4.mp4" type="video/mp4" />
       Tu navegador no soporta video HTML5.
     </video>
   </div>
