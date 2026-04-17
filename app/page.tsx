@@ -200,12 +200,17 @@ export default function Home() {
               </div>
 
               <h1 className="mt-6 max-w-4xl text-5xl font-black leading-[0.92] md:text-7xl">
-                Impacto visual que hace que tu marca se vea inolvidable.
-              </h1>
+  Impacto visual que hace que tu marca se vea inolvidable.
+</h1>
 
-              <p className="mt-6 max-w-xl text-lg leading-8 text-white/72 md:text-xl">
-                Menos discurso. Más imagen, movimiento y presencia.
-              </p>
+<p className="mt-5 max-w-2xl text-base leading-8 text-white/78 md:text-xl">
+  Producción audiovisual, tomas con dron, edición de video y voz en off para
+  marcas, negocios y eventos.
+</p>
+
+<p className="mt-4 max-w-xl text-lg leading-8 text-white/72 md:text-xl">
+  Menos discurso. Más imagen, movimiento y presencia.
+</p>
 
               <div className="mt-8 flex flex-wrap gap-4">
                 <a
