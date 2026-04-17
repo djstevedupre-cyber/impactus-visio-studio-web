@@ -203,7 +203,7 @@ export default function Home() {
   Impacto visual que hace que tu marca se vea inolvidable.
 </h1>
 
-<p className="mt-5 max-w-2xl text-base leading-8 text-white/78 md:text-xl">
+<p className="mt-5 max-w-2xl text-lg leading-8 text-white/78 md:text-xl">
   Producción audiovisual, tomas con dron, edición de video y voz en off para
   marcas, negocios y eventos.
 </p>
