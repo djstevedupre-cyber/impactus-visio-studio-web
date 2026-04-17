@@ -199,7 +199,7 @@ export default function Home() {
                 Dron · Video · Voz · Producción visual
               </div>
 
-              <h1 className="mt-6 max-w-4xl text-5xl font-black leading-[0.92] md:text-7xl">
+              <h1 className="mt-6 max-w-4xl text-4xl font-black leading-[0.95] sm:text-5xl md:text-7xl">
   Impacto visual que hace que tu marca se vea inolvidable.
 </h1>
 
@@ -352,6 +352,19 @@ export default function Home() {
               </video>
             </div>
           </div>
+          <div className="mt-6 flex justify-center">
+  <div className="w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
+    <video
+      controls
+      preload="metadata"
+      poster="/poster-video4.jpg"
+      className="h-[430px] w-full rounded-[1.5rem] object-cover"
+    >
+      <source src={showcaseVideos[3]} type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+</div>
         </section>
 
         <section className="mx-auto max-w-7xl px-6 py-16 md:py-20">
