@@ -14,7 +14,10 @@ export default function Home() {
   const showcaseVideos = [
     "/video1.mp4",
     "/video2.mp4",
-    "/eventos.mp4",
+    "/video3.mp4",
+    "/video4.mp4",
+    "/video5.mp4",
+    "/video6.mp4",
   ];
 
   const [formData, setFormData] = useState({
@@ -352,15 +355,39 @@ export default function Home() {
               </video>
             </div>
           </div>
-          <div className="mt-6 flex justify-center">
-  <div className="w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+  <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
     <video
       controls
       preload="metadata"
       poster="/poster-video4.jpg"
       className="h-[430px] w-full rounded-[1.5rem] object-cover"
     >
-      <source src="/video4.mp4" type="video/mp4" />
+      <source src={showcaseVideos[3]} type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+
+  <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
+    <video
+      controls
+      preload="metadata"
+      poster="/poster-video5.jpg"
+      className="h-[430px] w-full rounded-[1.5rem] object-cover"
+    >
+      <source src={showcaseVideos[4]} type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </div>
+
+  <div className="mx-auto w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] p-3 shadow-2xl shadow-black/20">
+    <video
+      controls
+      preload="metadata"
+      poster="/poster-video6.jpg"
+      className="h-[430px] w-full rounded-[1.5rem] object-cover"
+    >
+      <source src={showcaseVideos[5]} type="video/mp4" />
       Tu navegador no soporta video HTML5.
     </video>
   </div>
