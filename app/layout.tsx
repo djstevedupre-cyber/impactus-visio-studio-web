@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
   display: "swap",
 });
 
-const siteUrl = "https://impactus-visio-studio-web.vercel.app";
+const siteUrl = "https://www.impactusvisio.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     "Impactus Visio Studio",
     "producción audiovisual Bogotá",
     "producción de video Bogotá",
-    "drone Bogotá",
+    "dron Bogotá",
     "tomas con dron",
     "fotografía aérea",
     "edición de video",
@@ -66,6 +66,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+
     googleBot: {
       index: true,
       follow: true,
@@ -77,9 +78,12 @@ export const metadata: Metadata = {
 
   openGraph: {
     title: "Impactus Visio Studio | Creamos contenido que impacta",
+
     description:
       "Producción audiovisual, tomas con dron, edición, voz en off y experiencias visuales para marcas, negocios y eventos.",
+
     url: siteUrl,
+
     siteName: "Impactus Visio Studio",
 
     images: [
