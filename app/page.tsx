@@ -747,6 +747,18 @@ export default function Home() {
   index === 6 ? "md:col-span-3 max-w-[900px]" : "max-w-[360px] md:max-w-none"
 }`}
                 >
+                  {index === 6 && (
+                    <div className="px-4 pb-4 pt-2 text-center">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.28em] text-cyan-300/70">
+                        Producción aérea
+                      </p>
+
+                      <h3 className="mt-2 text-xl font-bold text-white sm:text-2xl">
+                        Tomas Aéreas Profesionales para Propiedades e Inmuebles
+                      </h3>
+                    </div>
+                  )}
+
                   <video
                     controls
                     preload="metadata"
