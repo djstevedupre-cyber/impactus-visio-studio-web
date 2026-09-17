@@ -18,6 +18,7 @@ export default function Home() {
     "/video4.mp4",
     "/video5.mp4",
     "/video6.mp4",
+    "/video7.mp4",
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -739,16 +740,22 @@ export default function Home() {
 
             {/* MAS VIDEOS */}
             <div className="mt-6 grid gap-5 md:grid-cols-3">
-              {[3, 4, 5].map((index) => (
+              {[3, 4, 5, 6].map((index) => (
                 <div
                   key={index}
-                  className="mx-auto w-full max-w-[360px] overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-2.5 sm:rounded-[2.2rem] md:max-w-none"
+                  className={`mx-auto w-full overflow-hidden rounded-[2rem] border border-white/[0.08] bg-white/[0.025] p-2.5 sm:rounded-[2.2rem] ${
+  index === 6 ? "md:col-span-3 max-w-[900px]" : "max-w-[360px] md:max-w-none"
+}`}
                 >
                   <video
                     controls
                     preload="metadata"
                     poster={`/poster-video${index + 1}.jpg`}
-                    className="h-[540px] w-full rounded-[1.6rem] object-cover sm:rounded-[1.7rem] md:h-[430px]"
+                    className={
+  index === 6
+    ? "aspect-video w-full rounded-[1.6rem] bg-black object-contain sm:rounded-[1.7rem]"
+    : "h-[540px] w-full rounded-[1.6rem] object-cover sm:rounded-[1.7rem] md:h-[430px]"
+}
                   >
                     <source src={showcaseVideos[index]} type="video/mp4" />
                     Tu navegador no soporta video HTML5.
