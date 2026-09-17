@@ -1117,6 +1117,27 @@ export default function Home() {
                   </a>
 
                   <a
+                    href="https://wa.me/573117479006"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group mt-3 flex items-center justify-between gap-4 rounded-[1.5rem] border border-white/[0.08] bg-black/20 px-4 py-4 transition duration-300 hover:border-cyan-300/30 hover:bg-white/[0.05] sm:rounded-[1.7rem] sm:px-5 sm:py-5"
+                  >
+                    <div>
+                      <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/30 sm:text-[10px] sm:tracking-[0.28em]">
+                        WhatsApp · Juan Carlos
+                      </p>
+
+                      <p className="mt-2 text-lg font-semibold text-white sm:text-xl">
+                        +57 311 747 9006
+                      </p>
+                    </div>
+
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-cyan-300 font-bold text-black sm:h-11 sm:w-11">
+                      →
+                    </span>
+                  </a>
+
+                  <a
                     href="mailto:impactusvisio@gmail.com"
                     className="group mt-3 flex items-center justify-between gap-4 rounded-[1.5rem] border border-white/[0.08] bg-black/20 px-4 py-4 transition duration-300 hover:border-cyan-300/30 hover:bg-white/[0.05] sm:rounded-[1.7rem] sm:px-5 sm:py-5"
                   >
