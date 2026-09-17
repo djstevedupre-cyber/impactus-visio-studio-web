@@ -1124,7 +1124,7 @@ export default function Home() {
                   >
                     <div>
                       <p className="text-[9px] font-bold uppercase tracking-[0.25em] text-white/30 sm:text-[10px] sm:tracking-[0.28em]">
-                        WhatsApp · Juan Carlos
+                        WhatsApp · Juan Calderón
                       </p>
 
                       <p className="mt-2 text-lg font-semibold text-white sm:text-xl">
