@@ -21,12 +21,12 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "Impactus Visio Studio | Producción Audiovisual, Dron y Contenido Visual",
+      "Impactus Visio Studio | Video, Dron y Contenido para Negocios",
     template: "%s | Impactus Visio Studio",
   },
 
   description:
-    "Estudio creativo audiovisual en Bogotá especializado en producción de video, tomas profesionales con dron, edición, voz en off, contenido visual y experiencias 360° para marcas, negocios y eventos.",
+    "Producción audiovisual en Bogotá para empresas, inmobiliarias, restaurantes, eventos y marcas. Video para negocios, producción con dron, contenido para redes y producción completa.",
 
   keywords: [
     "Impactus Visio Studio",
@@ -35,12 +35,14 @@ export const metadata: Metadata = {
     "dron Bogotá",
     "tomas con dron",
     "fotografía aérea",
+    "video para negocios",
+    "video para inmobiliarias",
+    "video para restaurantes",
+    "contenido para redes sociales",
+    "Reels para negocios",
+    "video corporativo",
     "edición de video",
     "voz en off",
-    "contenido audiovisual",
-    "contenido para marcas",
-    "contenido para redes sociales",
-    "video corporativo",
     "producción audiovisual Colombia",
     "experiencias 360",
     "video profesional",
@@ -77,10 +79,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Impactus Visio Studio | Creamos contenido que impacta",
+    title: "Impactus Visio Studio | Video, Dron y Contenido para Negocios",
 
     description:
-      "Producción audiovisual, tomas con dron, edición, voz en off y experiencias visuales para marcas, negocios y eventos.",
+      "Video para negocios, producción con dron, contenido para redes y producción audiovisual completa desde Bogotá.",
 
     url: siteUrl,
 
@@ -102,10 +104,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Impactus Visio Studio | Creamos contenido que impacta",
+    title: "Impactus Visio Studio | Video, Dron y Contenido para Negocios",
 
     description:
-      "Producción audiovisual, dron, edición, voz en off y contenido visual para marcas, negocios y eventos.",
+      "Producción audiovisual para empresas, propiedades, eventos y marcas. Cotiza por WhatsApp.",
 
     images: ["/og-impactus.jpg"],
   },
@@ -153,7 +155,7 @@ export default function RootLayout({
     name: "Impactus Visio Studio",
 
     description:
-      "Estudio creativo audiovisual especializado en producción de video, tomas con dron, edición, voz en off, contenido visual y experiencias 360°.",
+      "Estudio audiovisual en Bogotá especializado en video para negocios, producción con dron, contenido para redes y producción audiovisual completa.",
 
     url: siteUrl,
 
@@ -163,7 +165,12 @@ export default function RootLayout({
 
     email: "impactusvisio@gmail.com",
 
-    telephone: "+573054247369",
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      url: "https://wa.me/573054247369",
+      availableLanguage: ["Spanish"],
+    },
 
     address: {
       "@type": "PostalAddress",
@@ -182,13 +189,25 @@ export default function RootLayout({
     ],
 
     knowsAbout: [
+      "Video para negocios",
+      "Producción con dron",
+      "Contenido para redes",
       "Producción audiovisual",
-      "Tomas con dron",
       "Edición de video",
       "Voz en off",
-      "Contenido para marcas",
       "Experiencias 360",
     ],
+
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Servicios audiovisuales",
+      itemListElement: [
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Video para negocios" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Producción con dron" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Contenido para redes" } },
+        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Producción audiovisual completa" } },
+      ],
+    },
   };
 
   return (
