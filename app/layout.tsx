@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Producción audiovisual en Bogotá para empresas, inmobiliarias, restaurantes, eventos y marcas. Video para negocios, producción con dron, contenido para redes y producción completa.",
+    "Producción audiovisual en Bogotá para empresas, inmobiliarias, restaurantes, eventos y marcas. Video profesional, tomas con dron y contenido para redes.",
 
   keywords: [
     "Impactus Visio Studio",
@@ -79,10 +79,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Impactus Visio Studio | Video, Dron y Contenido para Negocios",
+    title: "Impactus Visio Studio | Video, dron y contenido",
 
     description:
-      "Video para negocios, producción con dron, contenido para redes y producción audiovisual completa desde Bogotá.",
+      "Producción audiovisual, tomas con dron y contenido para empresas, propiedades y marcas.",
 
     url: siteUrl,
 
@@ -90,10 +90,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/og-impactus.jpg",
+        url: "/og-impactus.png",
         width: 1200,
         height: 630,
-        alt: "Impactus Visio Studio - Producción audiovisual, dron y contenido visual",
+        alt: "Impactus Visio Studio | Video, dron y contenido",
       },
     ],
 
@@ -104,12 +104,12 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Impactus Visio Studio | Video, Dron y Contenido para Negocios",
+    title: "Impactus Visio Studio | Video, dron y contenido",
 
     description:
-      "Producción audiovisual para empresas, propiedades, eventos y marcas. Cotiza por WhatsApp.",
+      "Producción audiovisual, tomas con dron y contenido para empresas, propiedades y marcas.",
 
-    images: ["/og-impactus.jpg"],
+    images: ["/og-impactus.png"],
   },
 
   icons: {
@@ -161,7 +161,7 @@ export default function RootLayout({
 
     logo: `${siteUrl}/logo-impactus.png`,
 
-    image: `${siteUrl}/og-impactus.jpg`,
+    image: `${siteUrl}/og-impactus.png`,
 
     email: "impactusvisio@gmail.com",
 
@@ -201,11 +201,36 @@ export default function RootLayout({
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Servicios audiovisuales",
+
       itemListElement: [
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Video para negocios" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Producción con dron" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Contenido para redes" } },
-        { "@type": "Offer", itemOffered: { "@type": "Service", name: "Producción audiovisual completa" } },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Video para negocios",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Producción con dron",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Contenido para redes",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Producción audiovisual completa",
+          },
+        },
       ],
     },
   };
